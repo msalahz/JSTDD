@@ -7,15 +7,15 @@ const removeElement = main.removeElement;
 const getFirstElementOfProperty = main.getFirstElementOfProperty;
 const getNthElementOfProperty = main.getNthElementOfProperty;
 
-describe('getElementsGreaterThan10AtProperty', function()  {
-  it('input banana output { b: 1, a: 2, n: 2 }​​​​​', function()  {
+describe('Get elements greater than 10 at property', function()  {
+  it('Given an input as "banana" expected output should be { b: 1, a: 2, n: 2 }​​​​​', function()  {
     const output = countAllCharacters('banana');
     expect(output).to.deep.equal({ b: 1, a: 3, n: 2 });
   });
 });
 
-describe('getElementsGreaterThan10AtProperty', function()  {
-  it('input { key: [1, 20, 30] } output [20, 30] ', function()  {
+describe('Get elements greater than 10 at property', function()  {
+  it('Given the following input { key: [1, 20, 30] } Expected output should be [20, 30] ', function()  {
     const obj = { key: [1, 20, 30] };
     const output = getElementsGreaterThan10AtProperty(obj, 'key');
     expect(getElementsGreaterThan10AtProperty(obj, 'key'))
@@ -25,14 +25,14 @@ describe('getElementsGreaterThan10AtProperty', function()  {
   });
 });
 
-describe('removeElement', function()  {
-  it('input [1, 2, 3, 2, 1], 2 output [1, 3, 1] ', function()  {
+describe('Remove element', function()  {
+  it('Given the following input [1, 2, 3, 2, 1], 2 Expected output should be [1, 3, 1] ', function()  {
     const output = removeElement([1, 2, 3, 2, 1], 2);
     expect(output).to.deep.equal([1, 3, 1]);
   });
 });
 
-describe('getFirstElementOfProperty', function()  {
+describe('Get first element of property', function()  {
   it('Basic case works', function()  {
     expect(getFirstElementOfProperty({ key: [1, 2, 4] }, 'key')).to.be.equal(1);
   });
@@ -50,7 +50,7 @@ describe('getFirstElementOfProperty', function()  {
   });
 });
 
-describe('getNthElementOfProperty', function()  {
+describe('Get nth element of property', function()  {
   it('Basic case', function()  {
     const obj = { key: [1, 2, 6] };
     expect(getNthElementOfProperty(obj, 'key', 1)).to.be.equal(2);
